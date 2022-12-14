@@ -1,3 +1,4 @@
+// Con setTimeout
 function leerCarta(carta, callback) {
     return setTimeout(() => {
         callback(carta.split("").reverse().join(""));
