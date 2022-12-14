@@ -25,8 +25,20 @@ function envolverJuguete(juguete, callback) {
 }
 
 // Ejemplo de callback hell
-leerCarta("carrido de madera", (instruccion) => {
+/* leerCarta("carrido de madera", (instruccion) => {
     construirJuguete(instruccion, (juguete) => {
         envolverJuguete(juguete, console.log);
     });
-});
+});*/
+
+// Modularizar las llamadas
+// Hacer llamadas aparte para las llamadas
+function construirJ(juguete) {
+    envolverJuguete(juguete, console.log);
+}
+
+function leerC(instruccion) {
+    construirJuguete(instruccion, construirJ);
+}
+
+leerCarta("carrito de madera", leerC);
