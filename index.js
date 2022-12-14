@@ -9,6 +9,6 @@ http.get('http://httpstat.us/200', (res) => {
 
 console.log('3. Adios'); */
 
-setTimeout(() => {
+/* setTimeout(() => {
     console.log('Me has esperado < 3');
-}, 2000);
+}, 2000); */ 
